@@ -58,7 +58,7 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [],
+  plugins: [{ src: '@/plugins/addClassBrowser', ssr: false }],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -83,6 +83,20 @@ export default {
     '@nuxtjs/axios',
     'nuxt-mq',
     '@nuxtjs/style-resources',
+    [
+      'nuxt-modernizr',
+      {
+        'feature-detects': [
+          'audio',
+          'css/animations',
+          'touchevents',
+          'img/srcset',
+          'mediaquery/pointermq',
+          'mediaquery/hovermq',
+        ],
+        options: ['setClasses', 'load'],
+      },
+    ],
     ['vue-scrollto/nuxt', { duration: 300 }],
   ],
   mq: {

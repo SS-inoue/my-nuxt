@@ -3,8 +3,15 @@ module.exports = {
   // add your custom config here
   // https://stylelint.io/user-guide/configuration
   plugins: ['stylelint-scss'],
+  ignoreFiles: ['font/dist/**/*'],
   rules: {
     'declaration-empty-line-before': null,
+    'font-family-no-missing-generic-family-keyword': [
+      true,
+      {
+        ignoreFontFamilies: ['Material Design Icons'],
+      },
+    ],
     'at-rule-no-unknown': [
       true,
       {
@@ -16,6 +23,9 @@ module.exports = {
           'include',
           'mixin',
           'content',
+          'return',
+          'else',
+          'warn',
         ],
       },
     ],
