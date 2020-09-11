@@ -1,0 +1,116 @@
+<template>
+  <div class="container">
+    <div>
+      <nuxt-link v-scroll-to="'#hage'" to> アンカーへリンク </nuxt-link>
+    </div>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <div id="hage">hage</div>
+  </div>
+</template>
+
+<script lang="ts">
+import { Vue, Component } from 'nuxt-property-decorator'
+
+@Component
+export default class IndexPages extends Vue {}
+</script>
