@@ -1,0 +1,176 @@
+// Bulmaのベースユーティリティ（変数等）
+@import "~bulma/sass/utilities/initial-variables";
+@import "~bulma/sass/utilities/functions";
+@import "~bulma/sass/utilities/derived-variables";
+@import "~bulma/sass/utilities/animations";
+@import "~bulma/sass/utilities/mixins";
+@import "~bulma/sass/utilities/controls";
+
+// Typography -------------------------
+
+// ↓追加フォントなどの外部CSSは、core.scssかnuxt.config.jsで読み込む
+// YakuHanMP: https://cdn.jsdelivr.net/npm/yakuhanjp@3.0.0/dist/css/yakuhanmp.min.css
+// Noto Serif JP: https://fonts.googleapis.com/css?family=Noto+Serif+JP:400,700&amp;subset=japanese
+
+// 日本語用設定。sans-serifしかないので、serif書体も追加しておく。
+$family-sans-serif: sans-serif;
+$family-serif: "YakuHanMP", "Noto Serif JP", "Yu Mincho", "YuMincho", serif;
+
+// ベースのfont-familyを登録
+$family-primary: $family-sans-serif;
+$family-secondary: $family-serif;
+
+//フォントサイズを登録 -------------------------
+
+// 16pxを基準にremで調整(Doc：http://www.standardista.com/px-to-rem-conversion-if-root-font-size-is-16px/)
+$body-size: 16px !default;
+
+// 日本語でよく使われるサイズに変更。
+$size-1: 2.5rem; // 40px
+$size-2: 2rem; // 32px
+$size-3: 1.5rem; // 24px
+$size-4: 1.25rem; //20px
+$size-5: 1rem; // 16px
+$size-6: 0.875rem; // 14px
+$size-7: 0.75rem; // 12px
+
+// 基本のフォントサイズを設定
+$size-small: $size-7;
+$size-normal: $size-5;
+$size-medium: $size-4;
+$size-large: $size-3;
+
+// line-heightが1.5なので、日本語に合わせて広めに変更
+$body-line-height: 1.6;
+
+
+// brakepoints -------------------------------
+
+$tablet: 768px;       //LG G3など、5.5incタイプの大型スマートフォン
+$desktop: 1024px;      //ipad縦 ipad横
+$widescreen: 1440px;  //MackBook 12/Pro 13/Surface2/3/Pro/Nexus10
+$widescreen-enabled: true !default;
+$fullhd: 1344px + (2 * $gap) !default;
+$fullhd-enabled: true !default;
+
+// breakpointsメモ
+// @include mobile {}          //until 666px
+// @include tablet {}          //from 667px
+// @include tablet-only {}     //from 667px and until 969px
+// @include touch {}           //until 969px
+// @include desktop {}         //from 970px
+// @include desktop-only {}    //from 970px and until 1359px
+// @include widescreen {}      //from 1360px
+// @include widescreen-only {} //from 1360px and until 1407px
+// @include fullhd {}          /from 1408px
+
+// add Mixin
+@mixin wrapper {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  padding-right: $bm * 2;
+  padding-left: $bm * 2;
+  @include tablet {
+    padding-right: $bm * 3;
+    padding-left: $bm * 3;
+  }
+  @include desktop {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: $widescreen;
+    padding-right: $bm * 4;
+    padding-left: $bm * 4;
+  }
+  @include fullhd {
+    max-width: $fullhd - 2 * $gap;
+    width: $fullhd - 2 * $gap;
+  }
+}
+
+
+// color-variable ------------------------------------
+// secondary、thirdlyを追加して、カスタムカラーの幅を増やしています。
+
+// 明るい色・暗い色
+$light: #efefef;
+$light-lighten: lighten($light, 15%);
+$light-darken: darken($light, 5%);
+
+$dark: #3C3C48;
+$dark-lighten: lighten($dark, 10%);
+$dark-darken: darken($dark, 10%);
+
+// primary (ブランドカラー)
+$primary: #0A428C;
+$primary-invert: findColorInvert($primary);
+$primary-lighten: #205aa2;
+$primary-darken: darken($primary, 5%);
+
+// secondary（ポイントカラー ※カスタム）
+$secondary: #FA4988;
+$secondary-invert: findColorInvert($secondary);
+$secondary-lighten: lighten($secondary, 15%);
+$secondary-darken: darken($secondary, 5%);
+
+// thirdary（※カスタム）
+$thirdly: #DEE5EE;
+$thirdly-invert: findColorInvert($thirdly);
+$thirdly-lighten: #EBF0F4;
+$thirdly-darken: darken($thirdly, 5%);
+
+//snsカラー（※カスタム）
+$line: #1dcd00;
+$line-invert: findColorInvert($line);
+$facebook: #3B5998;
+$facebook-invert: findColorInvert($facebook);
+$twitter: #55acee;
+$twitter-invert: findColorInvert($twitter);
+$youtube: #EC3324;
+$youtube-invert: findColorInvert($youtube);
+$instagram: #CDA98A;
+$instagram-invert: findColorInvert($instagram);
+
+// 上記カラーを使えるようにする
+$custom-colors: (
+  "secondary": ($secondary, $secondary-invert),
+  "thirdly": ($thirdly, $thirdly-invert),
+  "line": ($line, $line-invert),
+  "facebook": ($facebook, $facebook-invert),
+  "twitter": ($twitter, $twitter-invert),
+  "youtube": ($youtube, $youtube-invert),
+  "instagram": ($instagram, $instagram-invert)
+);
+$colors: mergeColorMaps((
+  "white": ($white, $black),
+  "black": ($black, $white),
+  "light": ($light, $light-invert),
+  "dark": ($dark, $dark-invert),
+  "primary": ($primary, $primary-invert),
+  "link": ($link, $link-invert),
+  "info": ($info, $info-invert),
+  "success": ($success, $success-invert),
+  "warning": ($warning, $warning-invert),
+  "danger": ($danger, $danger-invert)
+),$custom-colors);
+
+// グラデーション(※カスタマイズ)
+@mixin gradient {
+  background: $primary;
+  background: linear-gradient(to right, #35B8CB 10%,$primary 90%);
+}
+
+// color-text ------------------------------------
+
+// text color
+$text: #666;
+$text-strong: $secondary;
+
+// Links
+$link: $primary;
+$link-hover: $primary-darken;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
+
+
+// etc -------------------------

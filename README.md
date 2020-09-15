@@ -200,3 +200,32 @@ webfontを作成
 cd font/
 npx @mdi/font-build
 ```
+
+
+### 設定
+
+#### breakpoint
+
+nuxt.config.js
+```
+  mq: {
+    defaultBreakpoint: 'default',
+    breakpoints: {
+      sm: 767,
+      md: 1024,
+      lg: Infinity,
+    },
+  },
+```
+
+assets/scss/bulma/utilities.scss
+```
+// brakepoints -------------------------------
+
+$tablet: 768px;       //LG G3など、5.5incタイプの大型スマートフォン
+$desktop: 1024px;      //ipad縦 ipad横
+$widescreen: 1440px;  //MackBook 12/Pro 13/Surface2/3/Pro/Nexus10
+$widescreen-enabled: true !default;
+$fullhd: 1344px + (2 * $gap) !default;
+$fullhd-enabled: true !default;
+```

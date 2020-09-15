@@ -53,7 +53,10 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['~~/font/dist/css/materialdesignicons.css'],
+  css: [
+    '~~/font/dist/css/materialdesignicons.css',
+    '~/assets/scss/bulma/core.scss',
+  ],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
@@ -98,18 +101,19 @@ export default {
       },
     ],
     ['vue-scrollto/nuxt', { duration: 300 }],
+    ['nuxt-buefy', { css: false }],
   ],
   mq: {
     defaultBreakpoint: 'default',
     breakpoints: {
-      sm: 450,
-      md: 1250,
+      sm: 767,
+      md: 1024,
       lg: Infinity,
     },
   },
   styleResources: {
     // your settings here
-    scss: ['./assets/_mixins.scss'],
+    scss: ['./assets/_mixins.scss', '~/assets/scss/bulma/utilities.scss'],
   },
   /*
    ** Axios module configuration

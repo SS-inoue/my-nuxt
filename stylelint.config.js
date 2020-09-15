@@ -5,6 +5,10 @@ module.exports = {
   plugins: ['stylelint-scss'],
   ignoreFiles: ['font/dist/**/*'],
   rules: {
+    'function-name-case': [
+      'lower',
+      { ignoreFunctions: ['findColorInvert', 'mergeColorMaps'] },
+    ],
     'declaration-empty-line-before': null,
     'font-family-no-missing-generic-family-keyword': [
       true,
