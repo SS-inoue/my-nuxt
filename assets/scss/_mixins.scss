@@ -4,3 +4,29 @@
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
 }
+
+@mixin ie($version: '') {
+  .ie#{$version} {
+    @content;
+  }
+}
+@mixin edge($version: '') {
+  .edge#{$version} {
+    @content;
+  }
+}
+@mixin chrome($version: '') {
+  .chrome#{$version} {
+    @content;
+  }
+}
+@mixin safari($version: '') {
+  .safari#{$version} {
+    @content;
+  }
+}
+@mixin firefox($version: '') {
+  .firefox#{$version} {
+    @content;
+  }
+}

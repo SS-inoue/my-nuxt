@@ -17,6 +17,14 @@
     <p class="widescreen">widescreen</p>
     <p class="widescreen-only">widescreen-only</p>
     <p class="fullhd">fullhd</p>
+    <p class="chrome">chrome</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
+    <p>hoge</p>
     <p>hoge</p>
     <p>hoge</p>
     <p>hoge</p>
@@ -160,6 +168,16 @@ export default class IndexPages extends Vue {}
 @include widescreen {
   .widescreen-only {
     color: red;
+  }
+}
+@include chrome() {
+  .chrome {
+    color: red;
+  }
+}
+@include chrome(85) {
+  .chrome {
+    color: green;
   }
 }
 </style>

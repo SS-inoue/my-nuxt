@@ -113,7 +113,7 @@ export default {
   },
   styleResources: {
     // your settings here
-    scss: ['./assets/_mixins.scss', '~/assets/scss/bulma/utilities.scss'],
+    scss: ['./assets/scss/_mixins.scss', '~/assets/scss/bulma/utilities.scss'],
   },
   /*
    ** Axios module configuration
