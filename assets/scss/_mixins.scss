@@ -34,6 +34,11 @@ $breakpoint-down: (
     @content;
   }
 }
+@mixin edge($version: '') {
+  .edge#{$version} {
+    @content;
+  }
+}
 @mixin chrome($version: '') {
   .chrome#{$version} {
     @content;
