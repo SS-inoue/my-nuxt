@@ -55,7 +55,7 @@ export default {
    */
   css: [
     '~~/font/dist/css/materialdesignicons.css',
-    '~/assets/scss/bulma/core.scss',
+    '~/assets/scss/bulma/core.scss', // bulmaを使わない場合は削除
   ],
   /*
    ** Plugins to load before mounting the App
@@ -101,7 +101,7 @@ export default {
       },
     ],
     ['vue-scrollto/nuxt', { duration: 300 }],
-    ['nuxt-buefy', { css: false }],
+    ['nuxt-buefy', { css: false }], // buefyを使わない場合は削除
   ],
   mq: {
     defaultBreakpoint: 'default',
@@ -113,7 +113,10 @@ export default {
   },
   styleResources: {
     // your settings here
-    scss: ['./assets/scss/_mixins.scss', '~/assets/scss/bulma/utilities.scss'],
+    scss: [
+      './assets/scss/_mixins.scss',
+      '~/assets/scss/bulma/utilities.scss', // bulmaを使わない場合は削除
+    ],
   },
   /*
    ** Axios module configuration
