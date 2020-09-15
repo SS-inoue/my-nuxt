@@ -109,7 +109,7 @@ export default {
   },
   styleResources: {
     // your settings here
-    scss: ['./assets/_mixins.scss'],
+    scss: ['./assets/scss/_mixins.scss'],
   },
   /*
    ** Axios module configuration

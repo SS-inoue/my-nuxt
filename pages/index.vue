@@ -3,7 +3,7 @@
     <div>
       <nuxt-link v-scroll-to="'#hage'" to> アンカーへリンク </nuxt-link>
     </div>
-    <p>hoge</p>
+    <p class="chrome">chrome</p>
     <p>hoge</p>
     <p>hoge</p>
     <p>hoge</p>
@@ -114,3 +114,15 @@ import { Vue, Component } from 'nuxt-property-decorator'
 @Component
 export default class IndexPages extends Vue {}
 </script>
+<style lang="scss" scoped>
+@include chrome() {
+  .chrome {
+    color: red;
+  }
+}
+@include chrome(85) {
+  .chrome {
+    color: green;
+  }
+}
+</style>

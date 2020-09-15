@@ -29,3 +29,23 @@ $breakpoint-down: (
     @content;
   }
 }
+@mixin ie($version: '') {
+  .ie#{$version} {
+    @content;
+  }
+}
+@mixin chrome($version: '') {
+  .chrome#{$version} {
+    @content;
+  }
+}
+@mixin safari($version: '') {
+  .safari#{$version} {
+    @content;
+  }
+}
+@mixin firefox($version: '') {
+  .firefox#{$version} {
+    @content;
+  }
+}
