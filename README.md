@@ -200,3 +200,37 @@ webfontを作成
 cd font/
 npx @mdi/font-build
 ```
+
+## Swiper
+
+https://swiperjs.com/vue/
+
+### デフォルト設定
+
+plugins/vue-awesome-swiper.ts
+```
+Vue.use(VueAwesomeSwiper) ← 削除
+// Vue.use(VueAwesomeSwiper, /* { default options with global component } */) ← コメントアウトを削除
+```
+
+### アンインストール
+
+コマンド
+```
+yarn remove swiper vue-awesome-swiper
+```
+
+nuxt.config.js
+```
+  css: [
+    '~/assets/scss/swiper/core.scss', // swiperを使わない場合は削除
+  ],
+  ...
+  plugins: [
+    { src: '~plugins/vue-awesome-swiper', ssr: false }, // swiperを使わない場合は削除
+  ],
+  ...
+  vendor: [
+    'vue-awesome-swiper', // swiperを使わない場合は削除
+  ],
+```

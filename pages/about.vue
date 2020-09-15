@@ -1,6 +1,6 @@
 <template lang="pug">
 .container
-  h1.red Hello {{ name }}!
+  h1.red Hello!
 </template>
 
 <script lang="ts">

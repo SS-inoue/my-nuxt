@@ -29,6 +29,7 @@
     "@nuxtjs/eslint-module": "^2.0.0",
     "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/stylelint-module": "^4.0.0",
+    "@types/swiper": "^5.4.0",
     "@types/ua-parser-js": "^0.7.33",
     "babel-eslint": "^10.1.0",
     "cross-env": "^7.0.2",
@@ -49,7 +50,9 @@
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-scss": "^3.18.0",
+    "swiper": "^6.2.0",
     "ts-loader": "^8.0.3",
+    "vue-awesome-swiper": "^4.1.1",
     "vue-scrollto": "^2.18.2"
   }
 }

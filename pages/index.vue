@@ -4,7 +4,11 @@
       <nuxt-link v-scroll-to="'#hage'" to> アンカーへリンク </nuxt-link>
     </div>
     <p class="chrome">chrome</p>
-    <p>hoge</p>
+    <swiper>
+      <swiper-slide>スライダー１</swiper-slide>
+      <swiper-slide>スライダー２</swiper-slide>
+      <swiper-slide>スライダー３</swiper-slide>
+    </swiper>
     <p>hoge</p>
     <p>hoge</p>
     <p>hoge</p>
