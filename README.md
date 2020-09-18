@@ -130,6 +130,25 @@ nuxt.config.js
 }
 ```
 
+### aos
+
+https://github.com/michalsnik/aos
+
+### アンインストール
+
+コマンド
+```
+yarn remove aos @types/aos
+```
+
+nuxt.config.js
+```
+  plugins: [
+    ...
+    { src: '~/plugins/aos', ssr: false }, // ←aosを使わない場合は削除
+  ],
+```
+
 ## CSS
 
 * sass

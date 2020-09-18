@@ -85,7 +85,9 @@
     <p>hoge</p>
     <p>hoge</p>
     <p>hoge</p>
-    <p>hoge</p>
+    <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+      hogehoge
+    </div>
     <p>hoge</p>
     <p>hoge</p>
     <p>hoge</p>

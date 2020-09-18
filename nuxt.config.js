@@ -58,7 +58,10 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [{ src: '@/plugins/addClassBrowser', ssr: false }],
+  plugins: [
+    { src: '@/plugins/addClassBrowser', ssr: false },
+    { src: '~/plugins/aos', ssr: false }, // ←aosを使わない場合は削除
+  ],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
