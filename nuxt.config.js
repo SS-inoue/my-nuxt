@@ -56,6 +56,7 @@ export default {
   css: [
     '~~/font/dist/css/materialdesignicons.css',
     '~/assets/scss/bulma/core.scss', // bulmaを使わない場合は削除
+    '~/assets/scss/swiper/core.scss', // swiperを使わない場合は削除
   ],
   /*
    ** Plugins to load before mounting the App
@@ -64,6 +65,7 @@ export default {
   plugins: [
     { src: '@/plugins/addClassBrowser', ssr: false },
     { src: '~/plugins/aos', ssr: false }, // ←aosを使わない場合は削除
+    { src: '~plugins/vue-awesome-swiper', ssr: false }, // swiperを使わない場合は削除
   ],
   /*
    ** Auto import components
@@ -142,5 +144,8 @@ export default {
         return [['@nuxt/babel-preset-app', { loose: true }]]
       },
     },
+    vendor: [
+      'vue-awesome-swiper', // swiperを使わない場合は削除
+    ],
   },
 }

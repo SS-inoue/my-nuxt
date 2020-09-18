@@ -18,7 +18,11 @@
     <p class="widescreen-only">widescreen-only</p>
     <p class="fullhd">fullhd</p>
     <p class="chrome">chrome</p>
-    <p>hoge</p>
+    <swiper>
+      <swiper-slide>スライダー１</swiper-slide>
+      <swiper-slide>スライダー２</swiper-slide>
+      <swiper-slide>スライダー３</swiper-slide>
+    </swiper>
     <p>hoge</p>
     <p>hoge</p>
     <p>hoge</p>
