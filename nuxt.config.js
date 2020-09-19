@@ -63,6 +63,7 @@ export default {
    ** https://nuxtjs.org/guide/plugins
    */
   plugins: [
+    { src: '~/plugins/components'},
     { src: '@/plugins/addClassBrowser', ssr: false },
     { src: '~/plugins/aos', ssr: false }, // ←aosを使わない場合は削除
     { src: '~plugins/vue-awesome-swiper', ssr: false }, // swiperを使わない場合は削除

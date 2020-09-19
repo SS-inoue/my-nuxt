@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <b-button @click="clickMe">Click Me</b-button>
+    <b-button>Click Me</b-button>
     <div>{{ $mq }}です</div>
     <div v-if="$mq === 'sm'">SMのtemplateです。</div>
     <div v-if="$mq === 'md'">MDのtemplateです。</div>
